@@ -1,0 +1,38 @@
+{
+    "item1": {
+        "item_name": "物品1",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 100,
+        "item_description": "物品1的描述：あしゃｊかｊｓぁｓじゃｌｊｓｌ"
+    },
+    "item2": {
+        "item_name": "物品2",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 200,
+        "item_description": "物品2的描述：ａｓｌｙｑｗ；ｌｊ；ａｊｓ；あｓ；ｌａ"
+    },
+    "item3": {
+        "item_name": "物品3",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 400,
+        "item_description": "物品3的描述：さｊｓｌかｊ；ｗｊ；ｑｗｊ；ｓあｓ；ｊａ；ｓｌｊあ"
+    },
+    "item4": {
+        "item_name": "物品4",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 600,
+        "item_description": "物品4的描述：ｈｄぁｋｓｈｌじぇｌｋｊぁｓｊｄぁｊｓｋｄ"
+    },
+    "item5": {
+        "item_name": "物品5",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 1000,
+        "item_description": "物品5的描述：ｊさｈけｗｑｌ；ｌｄじゃ；ｓｄ；あｓｄｊｌ；あｓ"
+    },
+    "item6": {
+        "item_name": "物品6",
+        "item_image": "./asset/img/cover1.jpg",
+        "item_price": 1500,
+        "item_description": "物品6的描述：ぁだだｄｓだｓｋでゃあｓｌｄじゃｌｋｓｊｌｄじゃｓｌだｓ"
+    }
+}
