@@ -13,4 +13,8 @@
 ## 05 3D主页（Three.js)
 ![screen_snapshot](./05/screen_snapshot.jpg)
 
+## 06 dark-mode（classList.toggle())
+![screen_snapshot](./06/screen_snapshot.jpg)
 
+## 07 Hamburger-menu（classList.toggle())
+![screen_snapshot](./07/screen_snapshot.jpg)

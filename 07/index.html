@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="navArea">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Detail</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="mask"></div>
+  </div>
+
+  <main>
+    <h1>Hamburger Menu</h1>
+  </main>
+
+  <script>
+    let nav = document.querySelector(".navArea");
+    let btn = document.querySelector(".toggle-btn");
+    let mask = document.querySelector(".mask");
+
+    btn.onclick = () => {
+      nav.classList.toggle("open");
+    };
+
+    mask.onclick = () => {
+      nav.classList.toggle("open");
+    };
+  </script>
+</body>
+
+</html>
