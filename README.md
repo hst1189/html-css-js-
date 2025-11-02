@@ -18,3 +18,6 @@
 
 ## 07 Hamburger-menu（classList.toggle())
 ![screen_snapshot](./07/screen_snapshot.jpg)
+
+## 07 下雪效果（js)
+![screen_snapshot](./08/screen_snapshot.jpg)
