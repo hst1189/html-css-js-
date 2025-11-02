@@ -24,3 +24,6 @@
 
 ## 09 企业主页（bootstrap5)
 ![screen_snapshot](./09/screen_snapshot.jpg)
+
+## 10 CSS Gradient Generator
+![screen_snapshot](./10/screen_snapshot.jpg)
