@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript practice</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main">
+    <nav>
+      <div class="logo-area">
+        <img src="./images/logo.png" class="logo" />
+        <h1>Electric PC Design</h1>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Detail</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="infomation">
+
+      <div class="overlay"></div>
+      <img src="./images/pc.png" class="mobile" />
+
+      <div id="circle">
+        <div class="feature one">
+          <img src="./images/camera.png" alt="" />
+          <div>
+            <h1>Camera</h1>
+            <p>Beautiful Lens.</p>
+          </div>
+        </div>
+        <div class="feature two">
+          <img src="./images/processor.png" alt="" />
+          <div>
+            <h1>Processor</h1>
+            <p>Processor is very important.</p>
+          </div>
+        </div>
+        <div class="feature three">
+          <img src="./images/display.png" alt="" />
+          <div>
+            <h1>Display</h1>
+            <p>High Quority Display</p>
+          </div>
+        </div>
+        <div class="feature four">
+          <img src="./images/battery.png" alt="" />
+          <div>
+            <h1>Battery</h1>
+            <p>Powerful Battery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="control">
+      <img src="./images/arrow.png" class="upBtn" />
+      <h3>Feature</h3>
+      <img src="./images/arrow.png" class="downBtn" />
+    </div>
+
+    <div class="footer">
+      <p>© 2025 Simple html+css+js by 小饅頭</p>
+    </div>
+  </div>
+
+  <script>
+    var circle = document.getElementById("circle");
+    var upBtn = document.querySelector(".upBtn");
+    var downBtn = document.querySelector(".downBtn");
+
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+
+    upBtn.onclick = function () {
+      /* 反時計回りに90°回転させる */
+      rotateSum = rotateValue + "rotate(-90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+      alert(rotateValue);
+    };
+    downBtn.onclick = function () {
+      /* 時計回りに90°回転させる */
+      rotateSum = rotateValue + "rotate(90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+      alert(rotateValue);
+    };
+  </script>
+</body>
+
+</html>
