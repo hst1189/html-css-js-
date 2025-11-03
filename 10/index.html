@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>Document</title>
     <style>
         * {
@@ -16,6 +17,7 @@
             background: #2A7B9B;
             background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
             clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            overflow: hidden;
         }
 
         .main {
@@ -64,6 +66,29 @@
             background-position: right center;
             text-decoration: underline;
         }
+
+        footer {
+            width: 100%;
+            height: 80px;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            line-height: 80px;
+            border: 1px solid black;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px 20px;
+        }
+
+        footer ul li:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -83,6 +108,14 @@
             <br>
         </div>
     </section>
+    <footer>
+        <ul>
+            <li><a><i class="fab fa-2x fa-twitter"></i></a></li>
+            <li><a><i class="fab fa-2x fa-github"></i></a></li>
+            <li><a><i class="fab fa-2x fa-youtube"></i></a></li>
+            <li><a><i class="fab fa-2x fa-apple"></i></a></li>
+        </ul>
+    </footer>
 
 </body>
 

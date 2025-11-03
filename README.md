@@ -30,3 +30,6 @@
 
 ## 11 Glass Card (tilt.js)
 ![screen_snapshot](./11/screen_snapshot.jpg)
+
+## 12 Scroll Reveal Tutorial (scrollreveal.js)
+![screen_snapshot](./12/screen_snapshot.jpg)
