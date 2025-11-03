@@ -19,6 +19,9 @@
 ## 07 Hamburger-menu（classList.toggle())
 ![screen_snapshot](./07/screen_snapshot.jpg)
 
+## 07-2 sider menu
+![screen_snapshot](./07-2/screen_snapshot.jpg)
+
 ## 08 下雪效果（js)
 ![screen_snapshot](./08/screen_snapshot.jpg)
 
@@ -33,3 +36,5 @@
 
 ## 12 Scroll Reveal Tutorial (scrollreveal.js)
 ![screen_snapshot](./12/screen_snapshot.jpg)
+
+
