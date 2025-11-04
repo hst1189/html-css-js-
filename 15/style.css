@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(28, 27, 59);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 27, 59, 1) 0%,
+    rgba(9, 7, 64, 1) 100%
+  );
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 11rem;
+}
+
+.logo {
+  width: 65px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 45px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0172ce;
+}
+
+header nav img {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.container .title-section {
+  color: white;
+}
+
+.title-section h2 {
+  position: relative;
+  font-size: 5.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  line-height: 70px;
+}
+
+.title-section .title {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.title-section .title h3::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(233, 130, 219), rgb(158, 80, 158));
+}
+
+.title-section h3 {
+  font-size: 2rem;
+  color: rgb(177, 177, 177);
+  margin-bottom: 10px;
+}
+
+.price p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.price button {
+  padding: 15px 40px;
+  background: linear-gradient(to right, rgb(233, 130, 219), rgb(158, 80, 158));
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: padding 0.4s;
+}
+
+.price button:hover {
+  color: #0172ce;
+  padding: 20px 45px;
+}
+
+.plastation5 {
+  width: 600px;
+}
+
+.image-section {
+  position: relative;
+}
+
+.image-section::after {
+  content: "";
+  width: 140%;
+  height: 65%;
+  background: linear-gradient(to right, rgb(233, 130, 219), rgb(206, 114, 39));
+  position: absolute;
+  top: 10%;
+  left: 60px;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.image-section .add-button {
+  position: absolute;
+  top: 36%;
+  right: 0;
+  z-index: 2;
+  color: white;
+}
+
+.image-section .add-button .plus-btn {
+  color: white;
+  font-size: 4rem;
+}
+
+.image-section .add-button p {
+  font-size: 1.4rem;
+}
+
+/* footer section */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+footer ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-right: 45px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+footer ul li a:hover {
+  color: #0172ce;
+  transform: translateY(-10px);
+}
+
+/* レスポンシブ対応（メニューだけ非対応） */
+
+/* @media (max-width: 1300px) {
+  html {
+    font-size: 50%;
+  }
+  .image-section::after {
+    content: "";
+    width: 90%;
+    height: 65%;
+    background: linear-gradient(
+      to right,
+      rgb(233, 130, 219),
+      rgb(206, 114, 39)
+    );
+    position: absolute;
+    top: 10%;
+    left: 60px;
+    z-index: -1;
+    border-radius: 20px;
+  }
+}
+
+中央ぞろえ
+@media (max-width: 1135px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .container .title-section {
+    text-align: center;
+  }
+
+  .image-section {
+    text-align: center;
+  }
+
+  .plastation5 {
+    width: 400px;
+  }
+
+  .image-section::after {
+    width: 64%;
+    left: 17%;
+  }
+}
+
+/* header変更 */
+@media (max-width: 768px) {
+  .plastation5 {
+    width: 300px;
+  }
+
+  header nav #menuList {
+    position: absolute;
+    top: 105px;
+    right: 0;
+    width: 0%;
+    background: linear-gradient(
+      to right,
+      rgb(233, 130, 219),
+      rgb(206, 114, 39)
+    );
+    z-index: 2;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  header nav ul li {
+    display: block;
+  }
+
+  header nav img {
+    display: block;
+    color: white;
+    width: 40px;
+  }
+
+  footer {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 40%;
+  }
+}
