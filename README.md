@@ -40,4 +40,7 @@
 ## 13 SNS媒体（font-awesome5）
 ![screen_snapshot](./13/screen_snapshot.jpg)
 
+## 14 Music（WaveSurfer.js）
+![screen_snapshot](./14/screen_snapshot.jpg)
+
 
