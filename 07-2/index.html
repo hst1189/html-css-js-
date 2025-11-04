@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
@@ -32,7 +32,62 @@
     </ul>
   </div>
 
-  <section></section>
+  <section>
+    <img id="background" src="bg.jpg" />
+    <canvas id="canvas"></canvas>
+  </section>
+
+
+  <script src="rainyday.js"></script>
+  <script>
+    window.onload = function () {
+      const image = document.querySelector('img');
+      var engine = new RainyDay('canvas', 'background', image.width, image.height, 1, 1);
+      let preset = Math.floor(Math.random() * 8) + 1;
+      console.log(preset);
+
+      if (preset == 1) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.rain([engine.preset(3, 3, 0.88), engine.preset(5, 5, 0.9), engine.preset(6, 2, 1)], 100);
+      } else if (preset == 2) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(4, 4, 1)], 50);
+      } else if (preset == 3) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_SMUDGE;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(4, 4, 1)], 50);
+      } else if (preset == 4) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.rain([engine.preset(4, 4, 0.88), engine.preset(8, 8, 0.9), engine.preset(9, 4, 1)], 100);
+      } else if (preset == 5) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(8, 8, 1)], 50);
+      } else if (preset == 6) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_SMUDGE;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(8, 8, 1)], 50);
+      } else if (preset == 7) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.rain([engine.preset(6, 6, 0.88), engine.preset(12, 12, 0.9), engine.preset(9, 4, 1)], 100);
+      } else if (preset == 8) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_DROPS;
+        engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(12, 12, 1)], 50);
+      } else if (preset == 9) {
+        engine.gravity = engine.GRAVITY_NON_LINEAR;
+        engine.trail = engine.TRAIL_SMUDGE;
+        engine.rain([engine.preset(0, 2, 0.5), engine.preset(12, 12, 1)], 50);
+      }
+    }
+  </script>
 </body>
 
 </html>
