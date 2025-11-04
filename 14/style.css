@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.navbar .logo-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar .logo-wrap img {
+  width: 64px;
+  height: 64px;
+}
+
+.navbar .logo-wrap h3 {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.content {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  z-index: 10;
+  /*border: 1px solid black;*/
+}
+
+.content .content-up {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*border: 1px solid black;*/
+}
+
+.content .content-up .left-col h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+}
+
+.content .content-up .right-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content .content-up .right-col p {
+  color: white;
+}
+
+.content .content-up .right-col img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.content .content-up .right-col img:hover {
+  transform: scale(1.2);
+}
+
+#waveform {
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid black;*/
+}
