@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+            position: relative;
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            translate: -50%;
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            /*border: 1px solid black;*/
+        }
+
+        .container h1 {
+            color: white;
+            margin: 30px auto;
+        }
+
+        .container form {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 10px dashed #ffffff;
+        }
+
+        .container form .item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+        }
+
+        .container form label {
+            font-size: 20px;
+            color: white;
+        }
+
+        .container form input,
+        textarea {
+            border: none;
+            border-radius: 5px;
+            width: 280px;
+        }
+
+        button {
+            background-color: blue;
+            border: none;
+            color: white;
+            font-size: 20px;
+            margin-top: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 5px 5px 5px #000;
+        }
+
+        button:hover {
+            background-color: rgb(118, 118, 203);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="https://api.staticforms.dev/submit" method="POST">
+            <!-- Required: Your API Key -->
+            <input type="hidden" name="apiKey" value="sf_6fa13lcbf77jdgfhlncge3ak" />
+
+            <!-- Form Fields -->
+            <div class="item">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="请输入姓名" required />
+            </div>
+
+            <div class="item">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="请输入E-mail" required />
+            </div>
+
+            <div class="item">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="请输入Tel" />
+            </div>
+
+            <div class="item">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="10" placeholder="请输入咨询内容"></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+
+</html>
