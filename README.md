@@ -22,6 +22,9 @@
 ## 07-2 sider menu (rainday.js、font-awesome5)
 ![screen_snapshot](./07-2/screen_snapshot.jpg)
 
+## 07-3 sider menu (font-awesome5)
+![screen_snapshot](./07-3/screen_snapshot.jpg)
+
 ## 08 下雪效果（自作js）
 ![screen_snapshot](./08/screen_snapshot.jpg)
 

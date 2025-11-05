@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">ホーム</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-user"></i></span>
+          <span class="title">プロフィール</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-tv"></i></span>
+          <span class="title">チャンネル</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-search"></i></span>
+          <span class="title">設定</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">個人情報</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-info"></i></span>
+          <span class="title">ヘルプ</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fas fa-external-link"></i></span>
+          <span class="title">サインアウト</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const list = document.querySelectorAll(".list");
+    console.log(list);
+    function activeLink() {
+      list.forEach((item) =>
+        // console.log(item);
+        item.classList.remove("active")
+      );
+      this.classList.add("active");
+    }
+
+    list.forEach((item) => {
+      item.addEventListener("click", activeLink);
+    });
+  </script>
+</body>
+
+</html>
