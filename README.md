@@ -1,6 +1,9 @@
 ## 01 圣杯布局（顶部固定）
 ![screen_snapshot](./01/screen_snapshot.jpg)
 
+## 01_2 固定顶部
+![screen_snapshot](./01_2/screen_snapshot.jpg)
+
 ## 02 企业主页（js鼠标跟随）
 ![screen_snapshot](./02/screen_snapshot.jpg)
 
@@ -57,3 +60,4 @@
 
 ## 18 nodejs chat-app（https://socket.io/）
 ![screen_snapshot](./18/screen_snapshot.jpg)
+
