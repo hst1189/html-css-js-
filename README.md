@@ -58,6 +58,6 @@
 ## 17 HTMLのみForm（https://www.staticforms.xyz）
 ![screen_snapshot](./17/screen_snapshot.jpg)
 
-## 18 nodejs chat-app（https://socket.io/）
+## 18 nodejs chat-app（socket.io, SQlite）
 ![screen_snapshot](./18/screen_snapshot.jpg)
 
