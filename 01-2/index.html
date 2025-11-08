@@ -12,7 +12,10 @@
 <body>
   <div class="header">
     <nav class="navbar">
-      <h2 class="logo">Relax</h2>
+      <div class="title">
+        <img src='./images/logo.png' />
+        <h2>Relax</h2>
+      </div>
       <ul class="menu">
         <li><a href="#">ホーム</a></li>
         <li><a href="#">本サイトについて</a></li>
@@ -22,6 +25,8 @@
       </ul>
     </nav>
   </div>
+
+  <div class="container"></div>
 
   <div class="text-area">
     <p class="text">
@@ -120,9 +125,17 @@
   <script>
     const menu = document.querySelector(".menu");
     const navbar = document.querySelector(".navbar");
+    console.log(window.pageYOffset);
+    console.log(menu.offsetTop);
+
     window.addEventListener("scroll", () => {
+      console.log(window.pageYOffset);
+      console.log(menu.offsetTop);
+      if (window.pageYOffset === 0) {
+        navbar.classList.remove("sticky");
+      }
+
       if (window.pageYOffset >= menu.offsetTop) {
-        //stickyクラスをnavbarに付与する。
         navbar.classList.add("sticky");
       } else {
         navbar.classList.remove("sticky");

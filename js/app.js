@@ -1,45 +1,18 @@
-import express from "express";
-const app = express();
-
-const a = {
-    name: "dasdsas",
-    age: 13,
-    sex: "female",
-    t: {
-        aaa: "aaa",
-        ccc: "ccc",
-        ddd: "ddd",
-        zzz: "zzz",
-    }
-}
-
-
-const users = [
-    { id: 1, name: "aaa", age: 18 },
-    { id: 2, name: "bbb", age: 18 },
-    { id: 3, name: "ccc", age: 18 },
-    { id: 4, name: "ddd", age: 18 },
-    { id: 5, name: "eee", age: 18 }
-]
-
-app.get('/', (req, res) => {
-    res.send(JSON.stringify(a));
-
-})
-
-app.get("/users", (req, res) => {
-    res.send(users);
-})
-
-app.get("/users/:id", (req, res) => {
-
-    res.send(users.find((user) => user.id == req.params.id));
-})
+fetch('https://api.trace.moe/search?url=https://images.plurk.com/32B15UXxymfSMwKGTObY5e.jpg')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        for (let result of data.result) {
+            console.log(`Title: ${result.filename}`);
+            console.log(`Episode: ${result.episode}`);
+            console.log(`Similarity: ${(result.similarity * 100).toFixed(2)}%`);
+            console.log(`video: ${result.video}`);
+            console.log(`image: ${result.image}`);
+            console.log('---');
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching dog image:', error);
+    });
 
 
-app.listen(80, (err) => {
-
-    if (!err) {
-        console.log("start on port 80");
-    }
-})

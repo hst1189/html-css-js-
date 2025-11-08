@@ -1,8 +1,8 @@
 ## 01 圣杯布局（顶部固定）
 ![screen_snapshot](./01/screen_snapshot.jpg)
 
-## 01_2 固定顶部
-![screen_snapshot](./01_2/screen_snapshot.jpg)
+## 01-2 固定顶部
+![screen_snapshot](./01-2/screen_snapshot.jpg)
 
 ## 02 企业主页（js鼠标跟随）
 ![screen_snapshot](./02/screen_snapshot.jpg)

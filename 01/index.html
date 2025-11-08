@@ -14,6 +14,7 @@
         }
 
         body {
+            position: relative;
             background-image: url('./images/bg.jpg');
             background-size: cover;
             background-position: center;
@@ -28,74 +29,78 @@
             position: fixed;
             background: rgb(252, 182, 112);
             border: 1px solid rgba(255, 255, 255);
-            text-align: center;
-            line-height: 80px;
             opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .header .logo {
             width: 85px;
             height: 50px;
-            vertical-align: middle;
+            border: 1px solid black;
         }
 
         .header a {
             color: white;
             text-decoration: none;
-            vertical-align: middle;
         }
 
-        /* 底部不固定 高度40px*/
-        .footer {
-            height: 40px;
-            width: 100%;
-            background: rgb(87, 99, 131);
-            border: 1px solid rgba(255, 255, 255);
-            text-align: center;
-            line-height: 40px;
-            opacity: 0.8;
+        .header a:hover {
+            color: blue;
         }
 
-        /* 中间 flex’row 左 中 右 高度120vh*/
+
+        /* 中间 flex’row 左 中 右 高度100vh*/
         .container {
             margin-top: 80px;
-            height: 120vh;
+            /* 上距离*/
+            height: 100vh;
             display: flex;
             flex-direction: row;
             opacity: 0.8;
         }
 
-        /* 中 宽度自动填充， 高度同父类120vh*/
-        .center {
-            flex: 1;
+
+        .center,
+        .left,
+        .right {
             background: rgb(206, 201, 201);
             border: 1px solid rgba(255, 255, 255);
             text-align: center;
-            line-height: 120vh;
         }
 
-        /* 左 宽度固定200px， 高度同父类120vh*/
         .left {
             width: 200px;
-            background: rgba(95, 179, 235, 0.972);
-            border: 1px solid rgba(255, 255, 255);
-            text-align: center;
-            line-height: 120vh;
         }
 
-        /* 右 宽度固定100px， 高度同父类120vh*/
         .right {
             width: 100px;
-            background: rgb(231, 105, 2);
-            border: 1px solid rgba(255, 255, 255);
-            text-align: center;
-            line-height: 120vh;
+        }
+
+        .center {
+            flex: 1;
+        }
+
+        /* 底部不固定 高度40px*/
+        .footer {
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(87, 99, 131);
+            opacity: 0.8;
         }
     </style>
 </head>
 
 <body>
-    <div class="header"><img class='logo' src='./images/logo.png' /><a href="#">header</a></div>
+    <div class="header">
+        <img class='logo' src='./images/logo.png' />
+        <a href="#">header</a>
+    </div>
     <div class="container">
         <div class="left">left</div>
         <div class="center">center</div>
