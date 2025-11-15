@@ -1,163 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ドロップダウンメニュー</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menuBar">
+      <ul>
+        <li class="active" id="menu1">
+          <a href="#" id="menu1">ホーム</a>
+          <div class="subMenu-1">
+            <ul>
+              <li>
+                <a href="#">サイトについて</a>
+              </li>
+              <li><a href="#">社訓</a></li>
+              <li><a href="#">事業内容</a></li>
+              <li><a href="#">スローガン</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="menu2">
+          <a href="#" id="menu2">オンライン相談</a>
+          <div class="subMenu-1">
+            <ul>
+              <li>
+                <a href="#">サイトについて</a>
+              </li>
+              <li><a href="#">社訓</a></li>
+              <li><a href="#">事業内容</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="menu3">
+          <a href="#" id="menu3">お問い合わせ</a>
+          <div class="subMenu-1">
+            <ul>
+              <li><a href="#">サイトについて</a></li>
+              <li><a href="#">社訓</a></li>
+              <li><a href="#">事業内容</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="menu4">
+          <a href="#" id="menu4">ブログ</a>
+          <div class="subMenu-1">
+            <ul>
+              <li><a href="#">サイトについて</a></li>
+              <li><a href="#">社訓</a></li>
+              <li><a href="#">事業内容</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
 
-<head>
-  <title>chatapp tutorial</title>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    .display {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100vh - 60px);
-      display: flex;
-      flex-direction: row;
-      /*border: 1px solid white;*/
-    }
-
-    #msg-list {
-      flex: 5;
-      list-style-type: none;
-      overflow: auto;
-    }
-
-    #msg-list>li {
-      padding: 0.5rem 1rem;
-    }
-
-    #msg-list>li:nth-child(odd) {
-      background: rgb(207, 216, 248);
-    }
-
-    #history-list {
-      margin: 0 20px 10px 10px;
-      flex: 2;
-      list-style-type: none;
-      background-color: #4e8357;
-      border: 1px solid white;
-      box-shadow: 5px 5px 5px black;
-      overflow: auto;
-    }
-
-    #history-list>li {
-      padding: 0.5rem 1rem;
-      white-space: nowrap;
-    }
-
-
-    #form {
-      position: fixed;
-      display: flex;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      backdrop-filter: blur(10px);
-      background: #181818dc;
-      padding: 0.25rem;
-    }
-
-    #input {
-      border: none;
-      padding: 0 1rem;
-      flex-grow: 1;
-      margin: 0.25rem;
-    }
-
-    #input:focus {
-      outline: none;
-    }
-
-    #form>button {
-      background: #4e8357;
-      border: none;
-      padding: 0 1rem;
-      margin: 0.25rem;
-      border-radius: 5px;
-      outline: none;
-      color: #fff;
-      width: 100px;
-    }
-
-    #form>button:hover {
-      background-color: #07e62c;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="display">
-    <ul id="msg-list"></ul>
-    <ul id="history-list"></ul>
-  </div>
-
-  <form id="form" action="">
-    <input id="input" autocomplete="off" />
-    <button>Send</button>
-    <button id="toggle-btn">Disconnect</button>
-    <button id="history-btn">History</button>
-  </form>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
-    let socket = io();
-
-    const form = document.getElementById("form");
-    const input = document.getElementById("input");
-    const msgList = document.getElementById("msg-list");
-    const toggleButton = document.getElementById('toggle-btn');
-    const historyList = document.getElementById("history-list");
-    const historyButton = document.getElementById('history-btn');
-
-    toggleButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (socket.connected) {
-        toggleButton.innerText = 'Connect';
-        socket.disconnect();
-      } else {
-        toggleButton.innerText = 'Disconnect';
-        socket.connect();
+    <script>
+      const menus = [];
+      for (let i = 1; i <= 4; i++) {
+        let menu = document.getElementById(`menu${i}`);
+        menus.push(menu);
       }
-    });
+      console.log(menus); //0, 1, 2, 3
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (input.value) {
-        socket.emit("chat message", input.value);
-        input.value = "";
-      }
-    });
-
-    historyButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (socket.connected) {
-        socket.emit("history");
-      }
-    });
-
-    socket.on("chat message", function (ip, lastID, msg) {
-      let item = document.createElement("li");
-      item.textContent = `(${ip}) ${lastID}>> ${msg}`;
-      msgList.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
-    });
-
-    socket.on("history", function (result) {
-      historyList.innerHTML = "";
-      result.forEach(value => {
-        historyList.innerHTML += `<li>${value.id} ${value.client_ip} ${value.content}</li>`;
+      //クリックしたliタグだけ.activeをつける。それ以外はremoveしたい。
+      document.addEventListener("click", (e) => {
+        console.log(e.target.id);
+        menus.map((menu) => {
+          if (e.target.id === menu.id) {
+            menu.classList.add("active");
+          } else {
+            menu.classList.remove("active");
+          }
+        });
       });
-      window.scrollTo(0, document.body.scrollHeight);
-    });
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

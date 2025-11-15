@@ -34,7 +34,7 @@
 ## 09 企业主页（bootstrap5）
 ![screen_snapshot](./09/screen_snapshot.jpg)
 
-## 10 CSS Gradient Generator
+## ★10 CSS Gradient Generator
 ![screen_snapshot](./10/screen_snapshot.jpg)
 
 ## 11 Glass Card (vanilla-tilt.js)
@@ -58,9 +58,22 @@
 ## 17 HTMLのみForm（https://www.staticforms.xyz）
 ![screen_snapshot](./17/screen_snapshot.jpg)
 
-## 18 nodejs chat-app（socket.io, SQlite）
+## 18 下拉菜单
 ![screen_snapshot](./18/screen_snapshot.jpg)
 
-## 19  个人主页（sass ./style.scss:./style.css --watch）
+## 19 个人主页（sass ./style.scss:./style.css --watch）
 ![screen_snapshot](./19/screen_snapshot.jpg)
+
+## 20 个人主页（typed.js）
+![screen_snapshot](./20/screen_snapshot.jpg)
+
+## 21 SNS登入页面
+![screen_snapshot](./21/screen_snapshot.jpg)
+
+
+## socket.io （nodejs、socket.io、SQlite）
+![screen_snapshot](./socket.io/screen_snapshot.jpg)
+
+
+https://dummyjson.com/
 
